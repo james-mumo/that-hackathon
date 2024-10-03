@@ -1,0 +1,63 @@
+### GET Request
+GET http://localhost:5000
+
+
+# Students
+
+### Signup Request
+POST http://localhost:5000/auth/signup
+Content-Type: application/json
+
+{
+  "fullname": "Jokhn Doe",
+  "password": "ykour_password_here",
+  "email": "jjohnd1oeexamplecom",
+  "phoneNumber": "123-456-7890",
+  "courseName": "Computer Science",
+  "registrationNumber": "CS1211234h5",
+  "year": "2023",
+  "session": "Spring 2023"
+}
+
+
+### Login Request
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+  "email": "jjohnd1oeexamplecom",
+  "password": "ykour_password_here"
+}
+
+
+
+------------------------------------------------------------------------
+# tutors routes
+
+###
+POST http://localhost:5000/auth/tut/signup
+Content-Type: application/json
+
+{
+  "fullname": "John Doe",
+  "password": "your_password_here",
+  "email": "johndoe@example11.com",
+  "phoneNumber": "123-456-7890",
+  "schoolOf": "School of Computer Science", // Add the schoolOf field
+  "coursesTaught": ["courseId1", "courseId2"], // Add an array of course IDs
+  "typeOfEmployment": "permanent", // Add the typeOfEmployment field
+  "registrationNumber": "CS1122345",
+  "year": 2023,
+  "session": "Spring 2023"
+}
+
+# login routes
+###
+POST http://localhost:5000/auth/tut/login
+Content-Type: application/json
+
+{
+  "email": "johndoe@example11.com",
+  "password": "your_password_here"
+}
+
